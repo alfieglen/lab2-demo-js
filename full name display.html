@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Name Display</title>
+    <script>
+        function displayName() {
+            var firstName = prompt('Enter your First Name: ');
+            var lastName = prompt('Enter your Last Name: ');
+
+            // Check if both inputs are not empty
+            if (firstName && lastName) {
+                var fullName = firstName + ' ' + lastName;
+                alert('Your name is: ' + fullName);
+            } else {
+                alert('Please enter both your First Name and Last Name.');
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Name Display</h1>
+    <p>This script will prompt you for your first name and last name and display your full name.</p>
+    <form name="myForm">
+        <input type="button" value="Display Name" onclick="displayName();">
+    </form>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dividing Numbers</title>
+    <script>
+        function calculateDivision() {
+            var inputNum1 = prompt('Enter the first number: ');
+            var inputNum2 = prompt('Enter the second number: ');
+
+            // Convert input strings to numbers
+            var num1 = parseFloat(inputNum1);
+            var num2 = parseFloat(inputNum2);
+
+            // Check if the second number is not zero (to avoid division by zero)
+            if (num2 !== 0) {
+                // Check if both inputs are valid numbers
+                if (!isNaN(num1) && !isNaN(num2)) {
+                    var quotient = num1 / num2;
+                    alert('The result of dividing ' + num1 + ' by ' + num2 + ' is: ' + quotient);
+                } else {
+                    alert('Please enter valid numbers.');
+                }
+            } else {
+                alert('Cannot divide by zero. Please enter a non-zero second number.');
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Dividing Numbers</h1>
+    <p>This script will prompt you for two numbers and display the result of dividing the first number by the second.</p>
+    <form name="myForm">
+        <input type="button" value="Calculate Division" onclick="calculateDivision();">
+    </form>
+</body>
+</html>

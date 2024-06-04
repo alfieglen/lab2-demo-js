@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Adding Numbers</title>
+    <script>
+        function calculateAddition() {
+            var inputNum1 = prompt('Enter the first number: ');
+            var inputNum2 = prompt('Enter the second number: ');
+
+            // Convert input strings to numbers
+            var num1 = parseFloat(inputNum1);
+            var num2 = parseFloat(inputNum2);
+
+            // Check if both inputs are valid numbers
+            if (!isNaN(num1) && !isNaN(num2)) {
+                var sum = num1 + num2;
+                alert('The sum of ' + num1 + ' and ' + num2 + ' is: ' + sum);
+            } else {
+                alert('Please enter valid numbers.');
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Adding Numbers</h1>
+    <p>This script will prompt you for two numbers and display the sum.</p>
+    <form name="myForm">
+        <input type="button" value="Calculate Sum" onclick="calculateAddition();">
+    </form>
+</body>
+</html>
